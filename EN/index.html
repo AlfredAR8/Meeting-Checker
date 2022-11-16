@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meeting Checker</title>
+    <link rel="stylesheet" href="../index_EN.css" type="text/css" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/AlfredAR8/MeetingCheckerAPI/main/LastVersion.json; script-src 'self';">
+  </head>
+  <body>
+    <div id="box1">
+      <div id="menuboxesDASHBOARD">
+        <img src="../resources/Home.png" id="svgimage"  />
+        <span id="textmenu">DASHBOARD</span>
+      </div>
+    <div id="box2"></div>
+    <div style="float:left" id="box3">
+      <img src="../resources/AppIcon.png" width="45.95px" height="35.675">
+    </div>
+    <div style="float:left" id="texttitle">
+      <span>Meeting&nbsp;Checker</span>
+    </div>
+  <div class="buttonmenu1">
+    <a href="Meetings.html" class="btn btn-2">Meetings</a> </div>
+    <img src="../resources/videocamera.png" id="svgimage2"  />
+  </div>
+  <div class="buttonmenu2">
+    <a href="Setup.html" class="btn btn-2">Setup</a> </div>
+    <img src="../resources/Setup.png" id="menubuttonimage2"  />
+  </div>
+  <div class="buttonmenu3">
+    <a href="Settings.html" class="btn btn-2">Settings</a> </div>
+    <img src="../resources/Settings.png" id="menubuttonimage3"  />
+  </div>
+  <div class="buttonmenu4">
+    <a href="More.html" class="btn btn-2">More</a> </div>
+    <img src="../resources/About-us.png" id="menubuttonimage4"  />
+  </div>
+  <div class="container">
+        <!-- Update Need Box -->
+    <div id="hiddentupdateneeded">
+    <a href="#" id="MSLink">
+    <div id="needupdatebox">
+      <span class="dot">
+        <img src="../resources/download.png" id="svgimage3"  />
+        <span id="textupdate">There&nbsp;is&nbsp;an&nbsp;update&nbsp;available!</span>
+        <span id="textupdate2">Go&nbsp;to&nbsp;Microsoft&nbsp;Store&nbsp;for&nbsp;update&nbsp;the&nbsp;app</span>
+      </span>
+    </div>
+  </a>
+</div>
+        <!-- Update Box -->
+        <div id="hiddentupdatelast">
+          <div id="NOneedupdatebox">
+            <span class="dot2">
+              <img src="../resources/downloadGreen.png" id="svgimage4"  />
+              <span id="textupdate3">You&nbsp;have&nbsp;the&nbsp;lastest&nbsp;version!</span>
+            </span>
+          </div>
+      </div>
+        <!-- StatusOffline -->
+        <div id="StatusOffline">
+          <div id="StatusOfflineBox">
+            <span id="dot3"></span>
+            <span class="StatusOfflineDot">
+              <span class="StatusOfflineDot2">
+              <img src="../resources/Bot.png" id="StatusOfflineSVG"  />
+              <span id="StatusOfflineText">Offline</span>
+            </span>
+            </span>
+          </div>
+      </div>
+
+              <!-- StatusOnline -->
+              <div id="StatusOnline">
+                <div id="StatusOnlineBox">
+                  <span class="StatusOnlineDot">
+                    <span class="StatusOnlineDot2">
+                    <img src="../resources/Bot.png" id="StatusOnlineSVG"  />
+                    <span id="StatusOnlineText">Online</span>
+                  </span>
+                  </span>
+                </div>
+            </div>
+
+              <!-- countdown -->
+                <div id="countdownbox">
+              <div class="countdown">
+                <span class="countdown__number"></span>
+                <svg class="countdown__icon" viewBox="0 0 130 130" >    
+                  <path class="countdown__icon__circle" d="M5,64.8a59.8,59.8 0 1,0 119.6,0a59.8,59.8 0 1,0 -119.6,0"/>
+                </svg>
+                <span id="CountdownText">Time&nbsp;for&nbsp;the&nbsp;next&nbsp;check</span>
+              </div>
+            </div>
+            <div id="countdownbox2">
+              <span>The Countdown is not available if you change from menu or if the dashboard reload, please stop the bot and start it again for see the countdown</span>
+            </div>
+            <div id="Timelinebox" style="position: absolute;left: 490px;top: 70px;height:420px;width:450px;border:1px;font:16px/26px;overflow:auto;">
+              <b style="font:26px; text-align:center;">
+            Last meetings timeline
+          </b>
+          <div id="Timeline" style="position: absolute;left: 5px; width: 429px; height: 370px; overflow:auto;">
+            
+          </div>
+            </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="../TweenMax.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

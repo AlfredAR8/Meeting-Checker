@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meeting Checker</title>
+    <link rel="stylesheet" href="../index_EN.css" type="text/css" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/AlfredAR8/MeetingCheckerAPI/main/LastVersion.json; script-src 'self';">
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div style="float:left" id="box3">
+      <img src="../resources/AppIcon.png" width="45.95px" height="35.675">
+    </div>
+    <div style="float:left" id="texttitle">
+    <span>Meeting&nbsp;Checker</span>
+  </div>
+              <!-- orange -->
+    <div id="menuboxesABOUTUS">
+      <img src="../resources/About-us.png" id="svgimage"  />
+      <span id="textmenu">MORE</span>
+  </div>
+      <!-- orange -->
+  <div class="buttonmenu">
+    <a href="index.html" class="btn btn-2">Dashboard</a> </div>
+    <img src="../resources/Home.png" id="menubuttonimage"  />
+  </div>
+  <div class="buttonmenu1">
+    <a href="Meetings.html" class="btn btn-2">Meetings</a> </div>
+    <img src="../resources/videocamera.png" id="svgimage2"  />
+  </div>
+  <div class="buttonmenu2">
+    <a href="Setup.html" class="btn btn-2">Setup</a> </div>
+    <img src="../resources/Setup.png" id="menubuttonimage2"  />
+  </div>
+  <div class="buttonmenu3">
+    <a href="Settings.html" class="btn btn-2">Settings</a> </div>
+    <img src="../resources/Settings.png" id="menubuttonimage3"  />
+  </div>
+  <div class="container">
+    <div style="position: absolute;left: 200px;top: 52px;height:450px;width:740px;border:1px;font:16px/26px;overflow:auto;">
+      <b>Disclaimer: Please note that this app is NOT made by Google and is made by an independent developer. All copyrights belong to their respective owners.
+        Google does not endorse or sponsor this app for Google meet. This is not owned by, is not licensed by, or a subsidiary of Google Inc. </b>
+      <br></br>
+      <b>Disclaimer: Please note that this app is NOT made by Discord and is made by an independent developer. All copyrights belong to their respective owners.
+        Discord does not endorse or sponsor this app for Google meet. This is not owned by, is not licensed by, or a subsidiary of Discord Inc. </b>
+        <br></br>
+      <button class="MoreButton1" id="FAQ">FAQ "Frequently Asked Questions"</button>
+      <button class="MoreButton2" id="Licenses">Licenses of libraries</button>
+      </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="../TweenMax.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="renderer_more.js"></script>
+  </body>
+</html>

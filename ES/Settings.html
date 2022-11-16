@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meeting Checker</title>
+    <link rel="stylesheet" href="../index_ES.css" type="text/css" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/AlfredAR8/MeetingCheckerAPI/main/LastVersion.json; script-src 'self';">
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div style="float:left" id="box3">
+      <img src="../resources/AppIcon.png" width="45.95px" height="35.675">
+    </div>
+    <div style="float:left" id="texttitle">
+    <span>Meeting&nbsp;Checker</span>
+  </div>
+              <!-- orange -->
+    <div id="menuboxesSETTINGS">
+      <img src="../resources/Settings.png" id="svgimage"  />
+      <span id="textmenu">Preferencias</span>
+  </div>
+      <!-- orange -->
+  <div class="buttonmenu">
+    <a href="index.html" class="btn btn-2">Inicio</a> </div>
+    <img src="../resources/Home.png" id="menubuttonimage"  />
+  </div>
+  <div class="buttonmenu1">
+    <a href="Meetings.html" class="btn btn-2">Reuniones</a> </div>
+    <img src="../resources/videocamera.png" id="svgimage2"  />
+  </div>
+  <div class="buttonmenu2">
+    <a href="Setup.html" class="btn btn-2">Establecer</a> </div>
+    <img src="../resources/Setup.png" id="menubuttonimage2"  />
+  </div>
+  <div class="buttonmenu4">
+    <a href="More.html" class="btn btn-2">Más</a> </div>
+    <img src="../resources/About-us.png" id="menubuttonimage4"  />
+  </div>
+  <div class="container">
+
+          <!-- settings -->
+          <div style="position: absolute;left: 200px;top: 52px;height:450px;width:750px;border:1px;font:16px/26px;overflow:auto;">
+          <form id="test-form">
+            <table id='json-table'>
+              <tbody>
+                <tr>
+                  <th id="TimeCheck">Tiempo entre comprobaciones (Segundos)</th>
+                  <th id="Language">Idioma</th>
+                  <th id="SistemTray">Minimizar en bandeja del sistema</th>
+                  <th id="DiscordIntegration">Discord MD (Mensaje Directo)</th>
+                  <th id="DiscordBotToken">Token del bot de Discord</th>
+                  <th id="DiscordUserID">ID del usuario de Discord</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input  id="numinput1" type="number" min="60" style="width: 60px;" placeholder="60" required> </td>
+                  <td>
+                      <select id="selectbox1">
+              <option value="EN">Inglés</option>
+              <option value="ES">Español</option>
+            </select>
+            <td>
+              <input type="checkbox" id="checkbox22"> </td>
+                  <td>
+                    <input type="checkbox" id="checkbox21"> </td>
+                  <td>
+                    <input type="text" id="DiscordBotToken1" placeholder="Token del bot de Discord" > 
+                  <td>
+                    <input type="text" id="DiscordUserID1" placeholder="ID del usuario de Discord" > </td>
+                </tr>
+              </tbody>
+            </table>
+            <input class="setupbutton2" id="submit" type="submit" value="¡Guardar preferencias!">
+          
+          </form>
+          <button class="setupbutton3" id="reloadcredentials">Ingresar cuenta</button>
+        </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="../TweenMax.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="renderer_settings.js"></script>
+  </body>
+</html>

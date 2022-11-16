@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meeting Checker</title>
+    <link rel="stylesheet" href="../index_EN.css" type="text/css" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/AlfredAR8/MeetingCheckerAPI/main/LastVersion.json; script-src 'self';">
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div style="float:left" id="box3">
+      <img src="../resources/AppIcon.png" width="45.95px" height="35.675">
+    </div>
+    <div style="float:left" id="texttitle">
+    <span>Meeting&nbsp;Checker</span>
+  </div>
+    <div id="menuboxesMEETINGS">
+      <img src="../resources/videocamera.png" id="svgimage"  />
+      <span id="textmenu">MEETINGS</span>
+  </div>
+  <div class="buttonmenu">
+    <a href="index.html" class="btn btn-2">Dashboard</a> </div>
+    <img src="../resources/Home.png" id="menubuttonimage"  />
+  </div>
+  <div class="buttonmenu2">
+    <a href="Setup.html" class="btn btn-2">Setup</a> </div>
+    <img src="../resources/Setup.png" id="menubuttonimage2"  />
+  </div>
+  <div class="buttonmenu3">
+    <a href="Settings.html" class="btn btn-2">Settings</a> </div>
+    <img src="../resources/Settings.png" id="menubuttonimage3"  />
+  </div>
+  <div class="buttonmenu4">
+    <a href="More.html" class="btn btn-2">More</a> </div>
+    <img src="../resources/About-us.png" id="menubuttonimage4"  />
+  </div>
+  <div class="container">
+    <div style="position: absolute;left: 200px;top: 52px;height:450px;width:740px;border:1px;font:16px/26px;overflow:auto;">
+      <div id="left">
+      </div>
+      <table bordercolor="#4a4a4d" frame=hsides rules=rows id='meetingsstatustable'>
+        <thead>
+          <tr>
+              <th id="name">Status</th>
+              <th id="code">Name</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../jquery.dataTables.min.js"></script>
+    <script src="renderer_meetings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,849 @@
+*, *::after, *::before {
+	user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./resources/Montserrat-Medium.ttf'); 
+}
+html *
+{
+	font-family: 'Montserrat';
+}
+
+  body {
+    background-color: #343435;
+    color: white
+  }
+  #box1{
+    width:190px;
+    height:511px;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    background:#2d355f;
+  }
+  #box2{
+    width:774px;
+    height:50px;
+    position: absolute;
+    top: 0px; 
+    left: 180px;
+    background:#2d355f;
+  }
+  #box3{
+    width:40px;
+    height:40px;
+    position: absolute;
+    top: 10px; 
+    left: 15px;
+  }
+  #texttitle {
+    color: #F3AE6E;
+    width:100px;
+    height:100px;
+    position: absolute;
+    top: 20px; 
+    left: 75px;
+  }
+  #menuboxesDASHBOARD {
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(254,223,138,1) 0%, rgba(251,180,63,1) 35%, rgba(255,117,59,1) 100%);
+    padding: 10px;
+    width: 140px;
+    height: 10px;
+    position: absolute;
+    top: 60px; 
+    left: 12px;
+    animation-name: menubox;
+    animation-duration: 0.7s;
+  }
+  #menuboxesMEETINGS {
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(254,223,138,1) 0%, rgba(251,180,63,1) 35%, rgba(255,117,59,1) 100%);
+    padding: 10px;
+    width: 140px;
+    height: 10px;
+    position: absolute;
+    top: 110px; 
+    left: 12px;
+    animation-name: menubox;
+    animation-duration: 0.7s;
+  }
+  #menuboxesSETUP {
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(254,223,138,1) 0%, rgba(251,180,63,1) 35%, rgba(255,117,59,1) 100%);
+    padding: 10px;
+    width: 140px;
+    height: 10px;
+    position: absolute;
+    top: 170px; 
+    left: 12px;
+    animation-name: menubox;
+    animation-duration: 0.7s;
+  }
+  #menuboxesSETTINGS {
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(254,223,138,1) 0%, rgba(251,180,63,1) 35%, rgba(255,117,59,1) 100%);
+    padding: 10px;
+    width: 140px;
+    height: 10px;
+    position: absolute;
+    top: 231px; 
+    left: 12px;
+    animation-name: menubox;
+    animation-duration: 0.7s;
+  }
+  #menuboxesABOUTUS {
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(254,223,138,1) 0%, rgba(251,180,63,1) 35%, rgba(255,117,59,1) 100%);
+    padding: 10px;
+    width: 140px;
+    height: 10px;
+    position: absolute;
+    top: 290px; 
+    left: 12px;
+    animation-name: menubox;
+    animation-duration: 0.7s;
+  }
+  #needupdatebox {
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(226deg, #641818 0%, #C85757 100%);
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 70px; 
+    left: 200px;
+  }
+
+  #NOneedupdatebox {
+    border-radius: 5px;
+    background: linear-gradient(226deg, #1D6418 0%, #57C867 100%);
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 70px; 
+    left: 200px;
+  }
+
+  .dot {
+    cursor: pointer;
+    position: absolute;
+    top: 10px; 
+    left: 110px;
+    height: 50px;
+    width: 50px;
+    background-color: #E34343;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot2 {
+    position: absolute;
+    top: 10px; 
+    left: 110px;
+    height: 50px;
+    width: 50px;
+    background-color: #9FE857;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #dot3 {
+    display:none;
+    position: absolute;
+    top: 4px; 
+    left: 252px;
+    height: 15px;
+    width: 15px;
+    background-color: #E34343;
+    border-radius: 50%;
+  }
+
+  #dot4 {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #dot5 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #hiddentupdateneeded {
+    display:none;
+  }
+
+  #hiddentupdatelast {
+    display:block;
+  }
+/* timer */
+#countdownbox2 {
+  display:none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(226deg, #8d3d3d 0%, #700e0e 100%);
+  padding: 10px;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  top: 370px; 
+  left: 200px;
+}
+
+#countdownbox {
+  display:block;
+  border-radius: 5px;
+  background: linear-gradient(226deg, #2d355f 0%, #5a6abb 100%);
+  padding: 10px;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  top: 370px; 
+  left: 200px;
+}
+
+#Timelinebox {
+  display:block;
+  border-radius: 5px;
+  background: linear-gradient(226deg, #2d355f 0%, #5a6abb 100%);
+  position: absolute;
+}
+#CountdownText {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 83px; 
+  left: -82px;
+  font-size: 20px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.countdown {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 85px;
+  border-radius: 50%;
+  background-color: #121b1c;
+  background-size: cover;
+  background-position: center center;
+  border: 3px solid grey;
+  transform-origin: center bottom;
+}
+.countdown__icon {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 86px;
+  fill: transparent;
+  stroke: #7ce6a3;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+.countdown__icon__circle {
+  stroke-dasharray: 375.787322998;
+}
+.countdown__number {
+  color: #fff;
+  font-size: 30px;
+}
+
+
+/* Offline bot*/
+  #StatusOffline {
+    display:block;
+  }
+
+  #StatusOfflineBox {
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(226deg, #2d355f 0%, #5a6abb 100%);
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 220px; 
+    left: 200px;
+  }
+
+  .StatusOfflineDot {
+    cursor: pointer;
+    position: absolute;
+    top: 5px; 
+    left: 90px;
+    height: 90px;
+    width: 90px;
+    background-color: #E34343;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .StatusOfflineDot2 {
+    cursor: pointer;
+    position: absolute;
+    top: 5px; 
+    left: 5px;
+    height: 80px;
+    width: 80px;
+    background: linear-gradient(226deg, #00a5bb 0%, #3269ff 100%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #StatusOfflineSVG {
+    cursor: pointer;
+    width:70px;
+    height:70px;
+    position: absolute;
+    top: 4px; 
+    left: 5px;
+  }
+
+  #StatusOfflineText {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 88px; 
+    left: 10px;
+    font-size: 20px;
+  }
+  /* Offline bot */
+
+  /* Online bot*/
+  #StatusOnline {
+    display:none;
+  }
+
+  #StatusOnlineBox {
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(226deg, #2d355f 0%, #5a6abb 100%);
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 220px; 
+    left: 200px;
+  }
+
+  .StatusOnlineDot {
+    cursor: pointer;
+    position: absolute;
+    top: 5px; 
+    left: 90px;
+    height: 90px;
+    width: 90px;
+    background-color: #53d664;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .StatusOnlineDot2 {
+    cursor: pointer;
+    position: absolute;
+    top: 5px; 
+    left: 5px;
+    height: 80px;
+    width: 80px;
+    background: linear-gradient(226deg, #00a5bb 0%, #3269ff 100%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #StatusOnlineSVG {
+    cursor: pointer;
+    width:70px;
+    height:70px;
+    position: absolute;
+    top: 4px; 
+    left: 5px;
+  }
+
+  #StatusOnlineText {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 88px; 
+    left: 10px;
+    font-size: 20px;
+  }
+  /* Online bot */
+
+  #textmenu {
+    text-align: right;
+    color: white;
+    width:140px;
+    height:10px;
+    position: absolute;
+    top: 5px; 
+    left: 14px;
+    font: 22px;
+    animation-name: textmenuanim;
+    animation-duration: 0.7s;
+  }
+
+  #textupdate {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 55px; 
+    left: -95px;
+    font-size: 17px;
+  }
+  #textupdate2 {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 85px; 
+    left: -68px;
+    font-size: 10px;
+  }
+  #textupdate3 {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 55px; 
+    left: -95px;
+    font-size: 17px;
+  }
+
+  #svgimage {
+    width:20px;
+    height:20px;
+    position: absolute;
+    top: 5px; 
+    left: 8px;
+  }
+
+  #svgimage2 {
+    width:20px;
+    height:20px;
+    position: absolute;
+    top: 115px; 
+    left: 20px;
+  }
+  
+  #svgimage3 {
+    cursor: pointer;
+    width:40px;
+    height:40px;
+    position: absolute;
+    top: 4px; 
+    left: 5px;
+  }
+  #svgimage4 {
+    width:40px;
+    height:40px;
+    position: absolute;
+    top: 4px; 
+    left: 5px;
+  }
+  #svgimage5 {
+    width:25px;
+    height:25px;
+    position: absolute;
+    top: 7px; 
+    left: 7px;
+  }
+
+
+  * {
+    box-sizing: inherit;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+ }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+ }
+  .container {
+    position: absolute;
+    top:0px; 
+    left: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+ }
+
+ .buttonmenu {
+  position: absolute;
+  top:35px; 
+  left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+
+ .buttonmenu1 {
+  position: absolute;
+  top:84px; 
+  left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+
+.buttonmenu2 {
+  position: absolute;
+  top:144px; 
+  left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+
+#menubuttonimage {
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 64px; 
+  left: 20px;
+}
+
+#menubuttonimage2 {
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 176px; 
+  left: 20px;
+}
+
+.buttonmenu3 {
+  position: absolute;
+  top:204px; 
+  left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+#menubuttonimage3 {
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 236px; 
+  left: 20px;
+}
+
+.buttonmenu4 {
+  position: absolute;
+  top:264px; 
+  left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+#menubuttonimage4 {
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 296px; 
+  left: 20px;
+}
+
+  @media (min-width: 600px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+ }
+  .btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+ }
+  @media (min-width: 600px) {
+    .btn {
+      margin: 0 1em 2em;
+   }
+ }
+  .btn:hover {
+    text-decoration: none;
+ }
+  .btn-2 {
+    letter-spacing: 0;
+ }
+  .btn-2:hover, .btn-2:active {
+    letter-spacing: 5px;
+ }
+  .btn-2:after, .btn-2:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+ }
+  .btn-2:hover:after, .btn-2:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+ }
+  .btn-2:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+ }
+
+ /* Button 3 */
+.remove {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 4px 7px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.remove:hover {
+  background: #c0392b;
+}
+
+.remove:active {
+  background: #c0392b;
+  top: 2px;
+}
+
+.remove:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.remove:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+/* Button 3 */
+
+  /* Button setup */
+  .setupbutton1 {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e6e335;
+    border-radius: 0.6em;
+    color: #e6e335;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 0.2em 0.7em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+ }
+  .setupbutton1:hover {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px #e6e335 inset;
+ }
+
+ .setupbutton2 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #4eb340;
+  border-radius: 0.6em;
+  color: #4eb340;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.setupbutton2:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #4eb340 inset;
+}
+
+.setupbutton3 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #ec4a2e;
+  border-radius: 0.6em;
+  color: #ec4a2e;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.MoreButton1 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #10bd00;
+  border-radius: 0.6em;
+  color: #10bd00;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.MoreButton1:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #10bd00 inset;
+}
+
+.MoreButton2 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #bd0000;
+  border-radius: 0.6em;
+  color: #bd0000;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.MoreButton2:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #bd0000 inset;
+}
+
+.setupbutton3:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #ec4a2e inset;
+}
+    /* Button setup */
+
+  @keyframes menubox {
+    0%   {width: 0px;}
+    100% {width: 140px;}
+  }
+
+  @keyframes textmenuanim {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

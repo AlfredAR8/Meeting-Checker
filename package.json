@@ -1,0 +1,43 @@
+{
+  "name": "meeting-checker",
+  "productName": "meeting-checker",
+  "version": "1.0.0",
+  "description": "This app displays the status of google meet meetings and send a message through discord when a meeting gets enabled.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Alfred Software",
+  "license": "Alfred Software",
+  "devDependencies": {
+    "electron": "^13.1.9"
+  },
+  "build": {
+    "productName": "meeting-checker",
+    "appId": "1859SpaceGaming.4160676D7D0C",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "appx"
+      ]
+    },
+    "appx": {
+      "identityName": "AlfredSoftware.MeetingChecker",
+      "publisher": "CN=CA0ACC23-CD78-443F-897D-CCFFC1530E7E",
+      "publisherDisplayName": "Alfred Software",
+      "applicationId": "meetingchecker"
+    }
+  },
+  "dependencies": {
+    "app-data-folder": "^1.0.0",
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "path": "^0.12.7",
+    "puppeteer": "^10.2.0",
+    "time-ago": "^0.2.1"
+  }
+}
